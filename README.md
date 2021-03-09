@@ -9,6 +9,12 @@ There is an [outdated connection package for the legacy elasticsearch client](ht
 This is based on code provided in an [issue](https://github.com/elastic/elasticsearch-js/issues/951) on the client's repo. I adapted the example to be used from an npm package.
 ## Usage
 
+### Install
+
+```bash
+npm i @smidges/aws-es-connection
+```
+
 ### Peer Dependencies
 
 You must install these packages along side as they will not be included by default.
