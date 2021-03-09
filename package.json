@@ -1,0 +1,64 @@
+{
+  "name": "@smidges/aws-es-connection",
+  "version": "1.0.0",
+  "description": "Custom Connection for Signing with AWS Credentials using the official Elasticsearch Node Client",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json --coverage",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src/*",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicksmider/aws-es-connection.git"
+  },
+  "author": "Nick Smider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicksmider/aws-es-connection/issues"
+  },
+  "homepage": "https://github.com/nicksmider/aws-es-connection#readme",
+  "devDependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.32",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "aws-sdk": "^2.859.0",
+    "aws-sdk-mock": "^5.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.3",
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
+    "aws-sdk": "^2.859.0"
+  },
+  "keywords": [
+    "@elastic",
+    "elasticsearch",
+    "elasticsearch-js",
+    "aws-es",
+    "aws",
+    "amazon",
+    "es",
+    "http",
+    "connector",
+    "extension",
+    "sign"
+  ]
+}
